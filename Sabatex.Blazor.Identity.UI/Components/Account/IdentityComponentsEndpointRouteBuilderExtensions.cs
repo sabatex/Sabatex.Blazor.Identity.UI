@@ -6,9 +6,10 @@ using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Primitives;
+using Sabatex.Blazor.Identity.UI.Components.Account;
 using Sabatex.Blazor.Identity.UI.Components.Account.Pages;
 using Sabatex.Blazor.Identity.UI.Components.Account.Pages.Manage;
-using Sabatex.Blazor.Identity.UI.Data;
+
 
 namespace Microsoft.AspNetCore.Routing
 {
