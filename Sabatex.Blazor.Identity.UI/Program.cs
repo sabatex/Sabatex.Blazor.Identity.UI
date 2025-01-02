@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Sabatex.Blazor.Identity.UI.Client.Pages;
 using Sabatex.Blazor.Identity.UI.Components;
-using Sabatex.Blazor.Identity.UI.Components.Account;
+using Sabatex.Blazor.Identity.UI.Components.Account.Services;
 using Sabatex.Blazor.Identity.UI.Data;
 
 var builder = WebApplication.CreateBuilder(args);

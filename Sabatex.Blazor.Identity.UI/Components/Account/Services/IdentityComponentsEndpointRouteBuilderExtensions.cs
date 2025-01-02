@@ -6,10 +6,9 @@ using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Primitives;
-using Sabatex.Blazor.Identity.UI.Components.Account;
 
 
-namespace Microsoft.AspNetCore.Routing
+namespace Sabatex.Blazor.Identity.UI.Components.Account.Services
 {
     internal static class IdentityComponentsEndpointRouteBuilderExtensions
     {

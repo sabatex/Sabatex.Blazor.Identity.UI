@@ -1,4 +1,4 @@
-﻿namespace Sabatex.Blazor.Identity.UI.Components.Account
+﻿namespace Sabatex.Blazor.Identity.UI.Components.Account.Services
 {
     public static class Constants
     {

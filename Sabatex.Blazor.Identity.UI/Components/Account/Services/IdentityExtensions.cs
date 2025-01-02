@@ -10,7 +10,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sabatex.Blazor.Identity.UI.Components.Account;
+namespace Sabatex.Blazor.Identity.UI.Components.Account.Services;
 
 /// <summary>
 /// Extended Identity

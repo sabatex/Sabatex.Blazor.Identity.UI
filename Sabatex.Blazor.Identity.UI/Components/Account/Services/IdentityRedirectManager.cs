@@ -1,7 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.AspNetCore.Components;
 
-namespace Sabatex.Blazor.Identity.UI.Components.Account
+namespace Sabatex.Blazor.Identity.UI.Components.Account.Services
 {
     internal sealed class IdentityRedirectManager(NavigationManager navigationManager)
     {

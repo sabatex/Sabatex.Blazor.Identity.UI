@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace Sabatex.Blazor.Identity.UI.Components.Account
+namespace Sabatex.Blazor.Identity.UI.Components.Account.Services
 {
     internal sealed class IdentityUserAccessor(UserManager<ApplicationUser> userManager, IdentityRedirectManager redirectManager)
     {

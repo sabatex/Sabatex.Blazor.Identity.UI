@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using System.Diagnostics;
 
-namespace Sabatex.Blazor.Identity.UI.Components.Account;
+namespace Sabatex.Blazor.Identity.UI.Components.Account.Services;
 
 // This is a server-side AuthenticationStateProvider that uses PersistentComponentState to flow the
 // authentication state to the client which is then fixed for the lifetime of the WebAssembly application.
@@ -49,15 +49,15 @@ public sealed class PersistingServerAuthenticationStateProvider : ServerAuthenti
         {
             var userId = principal.FindFirst(options.ClaimsIdentity.UserIdClaimType)?.Value;
             var email = principal.FindFirst(options.ClaimsIdentity.EmailClaimType)?.Value;
-            var roles = principal.FindAll(options.ClaimsIdentity.RoleClaimType).Select(s=>s.Value).ToArray();
+            var roles = principal.FindAll(options.ClaimsIdentity.RoleClaimType).Select(s => s.Value).ToArray();
 
             if (userId != null && email != null)
             {
-                state.PersistAsJson("UserInfo", new 
+                state.PersistAsJson("UserInfo", new
                 {
                     UserId = userId,
                     Email = email,
-                    Roles = roles 
+                    Roles = roles
                 });
             }
         }
