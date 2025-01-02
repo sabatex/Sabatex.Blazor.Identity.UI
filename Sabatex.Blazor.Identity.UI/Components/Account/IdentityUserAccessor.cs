@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Identity;
-using Sabatex.Blazor.Identity.UI.Data;
 
 namespace Sabatex.Blazor.Identity.UI.Components.Account
 {
