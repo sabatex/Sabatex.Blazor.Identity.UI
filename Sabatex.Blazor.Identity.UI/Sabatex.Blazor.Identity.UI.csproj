@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Components\Account\Pages\Login.uk.resx1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Sabatex.Blazor.Identity.UI.Client\Sabatex.Blazor.Identity.UI.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="9.0.0" />

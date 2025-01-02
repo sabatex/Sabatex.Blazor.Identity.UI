@@ -35,6 +35,7 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
     .AddDefaultTokenProviders();
 
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
+builder.Services.AddLocalization(options => { options.ResourcesPath = "Resources"; });
 
 var app = builder.Build();
 
@@ -57,6 +58,13 @@ app.UseHttpsRedirection();
 app.UseAntiforgery();
 
 app.MapStaticAssets();
+
+app.UseRequestLocalization(
+    new RequestLocalizationOptions() { ApplyCurrentCultureToResponseHeaders = true }
+    .AddSupportedCultures(new[] { "en-US", "uk-UA" })
+    .AddSupportedUICultures(new[] { "en-US", "uk-UA" })
+    .SetDefaultCulture("uk-UA")
+);
 app.MapRazorComponents<App>()
     .AddInteractiveWebAssemblyRenderMode()
     .AddAdditionalAssemblies(typeof(Sabatex.Blazor.Identity.UI.Client._Imports).Assembly);
