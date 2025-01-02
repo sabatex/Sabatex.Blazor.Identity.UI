@@ -45,7 +45,6 @@
 </div>
 
 @code {
-    public const string LoginCallbackAction = "LoginCallback";
 
     private string? message;
     private ExternalLoginInfo? externalLoginInfo;
@@ -84,7 +83,7 @@
 
         if (HttpMethods.IsGet(HttpContext.Request.Method))
         {
-            if (Action == LoginCallbackAction)
+            if (Action == Constants.LoginCallbackAction)
             {
                 await OnLoginCallbackAsync();
                 return;

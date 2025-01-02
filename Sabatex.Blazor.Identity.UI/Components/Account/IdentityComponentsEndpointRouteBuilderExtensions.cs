@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Primitives;
 using Sabatex.Blazor.Identity.UI.Components.Account;
-using Sabatex.Blazor.Identity.UI.Components.Account.Pages;
-using Sabatex.Blazor.Identity.UI.Components.Account.Pages.Manage;
+//using Sabatex.Blazor.Identity.UI.Components.Account.Pages;
+//using Sabatex.Blazor.Identity.UI.Components.Account.Pages.Manage;
 
 
 namespace Microsoft.AspNetCore.Routing
@@ -30,7 +30,7 @@ namespace Microsoft.AspNetCore.Routing
             {
                 IEnumerable<KeyValuePair<string, StringValues>> query = [
                     new("ReturnUrl", returnUrl),
-                    new("Action", ExternalLogin.LoginCallbackAction)];
+                    new("Action", Constants.LoginCallbackAction)];
 
                 var redirectUrl = UriHelper.BuildRelative(
                     context.Request.PathBase,
@@ -63,7 +63,7 @@ namespace Microsoft.AspNetCore.Routing
                 var redirectUrl = UriHelper.BuildRelative(
                     context.Request.PathBase,
                     "/Account/Manage/ExternalLogins",
-                    QueryString.Create("Action", ExternalLogins.LinkLoginCallbackAction));
+                    QueryString.Create("Action", Constants.LinkLoginCallbackAction));
 
                 var properties = signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl, signInManager.UserManager.GetUserId(context.User));
                 return TypedResults.Challenge(properties, [provider]);
