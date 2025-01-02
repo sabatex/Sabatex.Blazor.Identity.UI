@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Sabatex.Blazor.Identity.UI.Data;
 
+
 #nullable disable
 
 namespace Sabatex.Blazor.Identity.UI.Migrations
